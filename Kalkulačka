@@ -1,0 +1,36 @@
+
+print('KALKULAČKA')
+start = True
+
+while start:
+	number1 = int(input('Zadej první číslo: '))
+	number2 = int(input('Zadej druhé číslo: '))
+	print('Zadej číslo pro vykonání operace.')
+	print('1 - sčítání')
+	print('2 - odčítání')
+	print('3 - násobení')
+	print('4 - dělení')
+	print('5 - mocnina')
+	operace = int(input('Číslo operace: '))
+	if operace == 1:
+		print(f'Součet čísel {number1} a {number2} je {number1 + number2}.')
+	elif operace == 2:
+		print(f'Rozdíl čísel {number1} a {number2} je {number1 - number2}.')
+	elif operace == 3:
+		print(f'Násobení čísel {number1} a {number2} je {number1 * number2}.')
+	elif operace == 4:
+		print(f'Podíl čísel {number1} a {number2} je {round(number1 / number2, 2)}.')
+	elif operace == 5:
+		print(f'Umocnění čísel {number1} a {number2} je {number1 ** number2}.')
+	else:
+		print('Bylo zadáno špatné zadání.')
+	end = True
+	while end:
+		rozhodnuti = input('\nChceš pokračovat ve výpočtech? Y nebo N: ')
+		if rozhodnuti == 'y' or rozhodnuti == 'Y':
+			end = False
+		elif rozhodnuti == 'n' or rozhodnuti == 'N':
+			end = False
+			start = False
+print('Kalkulačka byla ukončena !!!')
+
