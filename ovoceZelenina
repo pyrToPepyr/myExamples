@@ -1,0 +1,28 @@
+
+start = True
+number = 0
+while start:
+	fruit = ['jahoda', 'banan', 'jablko', 'hruska']
+	vegetable = ['okurka', 'brambora', 'celer', 'mrkev']
+	zadani = input('Zadej název ovoce nebo zeleniny: ')
+	if zadani in fruit:
+		number += 1
+		print('Zadal jsi ovoce.')
+		pokracovat = input('Pro pokračování zadej y nebo n ukončení. ')
+	elif zadani in vegetable:
+		number += 1
+		print('Zadal jsi zeleninu.')
+		pokracovat = input('Pro pokračování zadej y nebo n ukončení. ')
+	end = True
+	while end:
+		if pokracovat == 'y':
+			end = False
+		elif pokracovat == 'n':
+			end = False
+			start = False
+if number == 1:
+	print(f'Zadal jsi {number} slovo.')
+elif 1 < number < 5:
+	print(f'Zadal jsi {number} slova.')
+else:
+	print(f'Zadal jsi {number} slov.')
